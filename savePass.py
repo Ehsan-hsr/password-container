@@ -3,6 +3,7 @@ import json
 from difflib import get_close_matches
 import os
 from os.path import isfile
+from genPass import generate_password
 
 data={"website": ".", "username": ".", "password": "."}
 
@@ -10,6 +11,7 @@ def get_data():
     data={}
     data["website"]=input("Enter your website address:")
     data["username"]=input("Enter your user name:")
+    print("you can try",generate_password())
     data["password"]=input("Enter your password:")
     return data
 def write_data(data):
